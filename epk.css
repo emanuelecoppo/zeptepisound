@@ -36,7 +36,7 @@ img {
   max-width: 100%;
 }
 h1, h2 {
-  font-size: calc(20px + 6.2vw); /*100px > 40px*/
+  font-size: calc(13.3px + 6.8vw); /*100px > 35px*/
 }
 p {
   font-size: calc(15.7px + 0.7vw); /*25px > 18px*/
@@ -70,7 +70,7 @@ a {
 }
 /*--------------------VARIE--------------------*/
 .sezione {
-  margin: calc(33.3px + 5.2vw) /*100px > 50px*/ calc(-13.3px + 7.3vw) /*80px > 10px*/;
+  margin: calc(26.7px + 7.3vw) /*120px > 50px*/ calc(-13.3px + 7.3vw) /*80px > 10px*/;
 }
 .sezione.contatti {
   text-align: center;
@@ -87,7 +87,7 @@ a {
 .titolo {
   text-align: justify;
   overflow-x: hidden;
-  margin-bottom: -.5em;
+  margin-bottom: -.7em;
 }
 .titolo span {
   font-size: 0;
@@ -107,6 +107,9 @@ a {
 .column:nth-child(odd) {
   margin-right: calc(6.7px + 1.0vw); /*20px > 10px*/
 }
+.column.artwork {
+  margin-right: 50px;
+}
 .button div {
   text-align: center;
   letter-spacing: .5em;
@@ -124,9 +127,6 @@ a {
 #video {
   margin-bottom: calc(10.0px + 3.1vw); /*50px > 20px*/
 }
-#artwork {
-  margin-bottom: calc(10.0px + 3.1vw); /*50px > 20px*/
-}
 #tracklist p:not(:last-child) {
   margin-bottom: 0;
 }
@@ -140,5 +140,11 @@ a {
   }
   .column:nth-child(odd) {
     margin-right: 0;
+  }
+  #artwork {
+    margin-bottom: calc(10.0px + 3.1vw); /*50px > 20px*/
+  }
+  .column.artwork {
+    margin: 0;
   }
 }
