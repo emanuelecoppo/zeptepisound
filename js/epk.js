@@ -13,3 +13,7 @@ $('.simboli img').each(function() {
 $('.titolo').each(function() {
   $(this).append('<span> &nbsp;</span>')
 });
+/*--------------------COMINGSOON--------------------*/
+window.setInterval(function() {
+  $('#comingsoon').attr('src', 'img/svg/'+ String.fromCharCode(65+Math.floor(Math.random()*26)) +'.svg');
+}, 1000);
