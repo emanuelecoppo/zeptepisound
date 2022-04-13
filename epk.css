@@ -90,6 +90,9 @@ a {
 .row {
   display: flex;
 }
+.row img {
+  min-width: 100%; /*fix if viewport > original px width*/
+}
 .column-1 {
   flex: 100%;
 }
