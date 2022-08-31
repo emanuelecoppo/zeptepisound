@@ -147,7 +147,7 @@ a {
 #tracklist p:not(:last-child) {
   margin-bottom: 0;
 }
-#soundcloud, p.primo {
+#soundcloud, .primo {
   margin-top: calc(23.3px + 2.1vw); /*50px > 30px*/
 }
 /*--------------------MOBILE--------------------*/
