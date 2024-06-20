@@ -1,0 +1,282 @@
+@font-face
+    font-family: "Format 1452 ZEPTEPI"
+    src: url(/fonts/format-1452-zeptepi.woff)
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: "ZEPTEPI Symbols"
+    src: url(/fonts/zeptepi-symbols.woff)
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Thin.woff)
+    font-weight: 200
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Light.woff)
+    font-weight: 300
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Regular.woff)
+    font-weight: 400
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Medium.woff)
+    font-weight: 500
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Bold.woff)
+    font-weight: 600
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff)
+    font-weight: 700
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Black.woff)
+    font-weight: 800
+    font-style: normal
+$symbols: "ZEPTEPI Symbols"
+$format-1452: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif
+$blue: #3278ff
+$black: #000000
+$white: #ffffff
+$lg-break: 1440px
+$md-break: 1024px
+$sm-break: 767px
+$gap: 10px
+$border: 1px solid black
+// -------------------------------------------------- lenis
+// html.lenis
+//     height: auto
+// .lenis.lenis-smooth
+//     scroll-behavior: auto
+// .lenis.lenis-smooth [data-lenis-prevent]
+//     overscroll-behavior: contain
+// .lenis.lenis-stopped
+//     overflow: hidden
+// .lenis.lenis-scrolling iframe
+//     pointer-events: none
+// -------------------------------------------------- general
+:root
+    --swiper-theme-color: $black
+*
+    margin: 0
+    font-weight: 400
+    box-sizing: border-box
+html, body, input, textarea, button
+    font-family: "Bw Gradual"
+    color: $black
+    font-size: 15px
+    -webkit-font-smoothing: antialiased
+body
+    background-color: $white
+    overflow-y: hidden
+::selection
+    color: $white
+    background-color: $black
+.text-justify
+    text-align: justify
+    margin-bottom: -1em
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
+.text-right
+    text-align: right
+.text-center
+    text-align: center
+h1, h2, h3
+    line-height: 1
+    font-size: 20px
+a
+    text-decoration: none
+    color: inherit
+b, strong
+    font-weight: 600
+.underline
+    text-decoration: underline
+    &:hover
+        color: $white
+        background-color: $black
+        text-decoration: none
+// -------------------------------------------------- display
+.d-flex
+    display: flex
+    gap: 2*$gap
+.small-gap
+    gap: $gap
+.flex-column
+    flex-direction: column
+.flex-row
+    flex-direction: row
+    align-items: start
+    > *
+        min-width: 0
+        flex-basis: 100%
+.d-inline-block
+    display: inline-block
+.hide
+    display: none
+.touch-show
+    display: none
+// -------------------------------------------------- ???
+img, video
+    display: block
+    background-color: $black
+    max-width: 100%
+    user-select: none
+.youtube
+    background-color: $black
+    aspect-ratio: 16/9
+    width: 100%
+    height: 100%
+    line-height: 0
+.soundcloud
+    background-color: $white
+    border-radius: 5px
+button
+    background-color: $white
+    outline: none
+    border: $border
+    cursor: pointer
+    padding: 3*$gap $gap
+    &:hover
+        background-color: $black
+        color: $white
+    .next
+        margin-left: .5*$gap
+        line-height: 0
+        font-size: 150%
+    &.negative
+        background-color: transparent
+        border-color: $white
+        color: $white
+        &:hover
+            background-color: $white
+            color: $black
+.button-next
+    // margin-top: 8*$gap
+// -------------------------------------------------- swiper
+#main-swiper
+    .swiper-slide
+        overflow-y: scroll
+        height: 100vh
+        height: 100dvh
+        background-color: $white
+    .slide-content
+        padding: 2*$gap $gap
+        max-width: $sm-break
+        margin: 0 auto
+// -------------------------------------------------- navigation
+#main-swiper
+    .sticky-title
+        position: sticky
+        top: 0
+        left: 0
+        width: 100vw
+        padding: 1.5*$gap 2*$gap
+        text-align: center
+        user-select: none
+        border-bottom: $border
+        border-color: $white !important
+        color: $white !important
+        mix-blend-mode: difference
+    .main-navigation-bar
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 999
+        width: 100vw
+        justify-content: space-between
+        mix-blend-mode: difference
+        &.on-first-slide
+            .swiper-prev-custom
+                transform: translateX(-100%)
+            .swiper-next-custom
+                transform: translateX(100%)
+    .swiper-prev-custom, .swiper-next-custom
+        transition: transform .3s ease-in-out
+        flex: 0 0 auto
+        width: 50px
+        height: 50px
+        padding: $gap
+        cursor: pointer
+        position: relative
+        color: $white
+        &:hover
+            background-color: $white
+            color: $black
+        span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 35px
+            line-height: 1
+            user-select: none
+            margin-top: -.3rem
+    .swiper-prev-custom
+        // border-right: $border
+    .swiper-next-custom
+        // border-left: $border
+    .swiper-button-disabled
+        color: rgba(255,255,255,.2)
+        &:hover
+            background-color: transparent !important
+            color: rgba(255,255,255,.2) !important
+            cursor: auto
+// -------------------------------------------------- first slide
+#hero-image
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 800px
+    max-width: none
+    z-index: -1
+#hero-title
+    font-family: $format-1452
+    font-size: 30px
+.simboli
+    font-family: $symbols
+    font-size: 50px
+#hero-title, .simboli
+    color: $white
+    justify-content: space-between
+    user-select: none
+    span
+        text-align: center
+        line-height: 1
+#first-slide
+    background-color: $black !important
+    overflow-x: hidden
+    .button-next
+        // margin-top: 0
+    .slide-content
+        padding: 2*$gap
+// -------------------------------------------------- media queries
+@media screen and (max-width: $lg-break)
+@media screen and (min-width: $md-break + 1)
+    .lg-hide
+        display: none !important
+@media screen and (max-width: $md-break)
+    html, body, input, textarea
+        font-size: 15px
+    .content-block.flex-row:not(.small-gap)
+        flex-direction: column
+@media screen and (max-width: $md-break) and (min-width: $sm-break + 1)
+    .md-hide
+        display: none !important
+@media screen and (max-width: $sm-break)
+    .sm-hide
+        display: none !important
+    html, body, input, textarea
+        font-size: 14px

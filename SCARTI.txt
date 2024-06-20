@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZEPTEPI</title>
+    <meta name="description" content="ZEPTEPI">
+    <meta name="theme-color" content="#3278ff">
+    <link rel="icon" href="/assets/img/favicon.png">
+    <!-- lenis -->
+    <script src="scripts/lenis.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
+    <script src="/scripts/swiper-bundle.min.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <!-- goo filter -->
+    <!-- <svg class="filter-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg> -->
+    <!-- <div class="gradient-bg">
+
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g-interactive"></div>
+        </div>
+      </div> -->
+    
+    <div class="swiper" id="main-swiper">
+        <div class="main-navigation-bar d-flex flex-row">
+            <div class="swiper-prev-custom"><span>&lt;</span></div>
+            <div></div>
+            <div class="swiper-next-custom"><span>&gt;</span></div>
+        </div>
+        <!-- <div class="soundcloud-bar">
+            <iframe id="soundcloud" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1417207939%3Fsecret_token%3Ds-kiWo8oqDtL2&color=%233278ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div> -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>1. Il nuovo disco</h2>
+                </div>
+                <div class="slide-content d-flex flex-column">
+                    <div class="content-block d-flex flex-row">
+                        <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                        <img src="/assets/img/creature.jpg" alt="">
+                    </div>
+                    <div class="content-block d-flex flex-row">
+                        <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                        <img src="/assets/img/creature.jpg" alt="">
+                    </div>
+                    <div class="content-block d-flex flex-row">
+                        <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                        <img src="/assets/img/creature.jpg" alt="">
+                    </div>
+                    <div class="content-block d-flex flex-row">
+                        <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                        <img src="/assets/img/creature.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>2. La simbologia</h2>
+                </div>
+                <div class="slide-content d-flex flex-row">
+                    <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                    <img src="/assets/img/creature.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>3. Le illustrazioni</h2>
+                </div>
+                <div class="slide-content d-flex flex-row">
+                    <p>La simbologia prende ispirazione dai geroglifici dell’Antico Egitto, interpretati in una prospettiva moderna e futuristica. Ciascuno dei 27 simboli disegnati è collegato ad una lettera dell’alfabeto, così da creare un sistema di scrittura, utilizzato per comunicare in codice. Tre di questi simboli sono stati scelti per rappresentare i tre componenti e perciò stampati sulle uniformi indossate sul palco.</p>
+                    <img src="/assets/img/creature.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>4. Il nuovo disco</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>5. La simbologia</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="sticky-title">
+                    <h2>6. Le illustrazioni</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="d-flex flex-row gradient-wrapper">
+        <div style="animation-duration: 1s;" class="gradient"><span>Z</span></div>
+        <div style="animation-duration: 1.2s;" class="gradient"><span>E</span></div>
+        <div style="animation-duration: 1.4s;" class="gradient"><span>P</span></div>
+        <div style="animation-duration: 1.6s;" class="gradient"><span>T</span></div>
+        <div style="animation-duration: 1.8s;" class="gradient"><span>E</span></div>
+        <div style="animation-duration: 2s;" class="gradient"><span>P</span></div>
+        <div style="animation-duration: 2.2s;" class="gradient"><span>I</span></div>
+    </div>
+
+    <div class="section">
+        <div class="sticky-title">
+            <h2>1. Lorem ipsum dolor sit amet</h2>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sticky-title">
+            <h2>2. Lorem ipsum dolor sit amet</h2>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sticky-title">
+            <h2>3. Lorem ipsum dolor sit amet</h2>
+        </div>
+    </div>
+
+    <div id="main" class="d-flex flex-column">
+        <h2>Luce Fredda EP (2022)</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quidem quas reprehenderit ut in soluta possimus perspiciatis. Soluta officiis eos cumque velit deserunt veritatis laborum quibusdam, magni ea, reiciendis voluptas.</p>
+        <img src="" alt="">
+        <h2>La simbologia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptate, ad, officia quis consequuntur sequi consectetur molestiae sint eveniet itaque quod porro dignissimos beatae iste eos omnis perspiciatis dolorum id?</p>
+        <img src="" alt="">
+        <h2>Luce Fredda EP (2022)</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quidem quas reprehenderit ut in soluta possimus perspiciatis. Soluta officiis eos cumque velit deserunt veritatis laborum quibusdam, magni ea, reiciendis voluptas.</p>
+        <img src="" alt="">
+        <h2>La simbologia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptate, ad, officia quis consequuntur sequi consectetur molestiae sint eveniet itaque quod porro dignissimos beatae iste eos omnis perspiciatis dolorum id?</p>
+        <img src="" alt="">
+    </div> -->
+
+    <!-- scripts -->
+    <script src="/scripts/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/script.js"></script>
+
+</body>
+
+</html>
+
+@font-face
+    font-family: "Format 1452 ZEPTEPI"
+    src: url(/fonts/format-1452-zeptepi.woff)
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Thin.woff)
+    font-weight: 200
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Light.woff)
+    font-weight: 300
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Regular.woff)
+    font-weight: 400
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Medium.woff)
+    font-weight: 500
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Bold.woff)
+    font-weight: 600
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff)
+    font-weight: 700
+    font-style: normal
+@font-face
+    font-family: "Bw Gradual"
+    src: url(/fonts/bw-gradual/BwGradual-Black.woff)
+    font-weight: 800
+    font-style: normal
+$format-1452: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif
+$blue: #3278ff
+$black: #000000
+$white: #ffffff
+$lg-break: 1440px
+$md-break: 1024px
+$sm-break: 767px
+$gap: 10px
+$border: 1px solid black
+// -------------------------------------------------- lenis
+// html.lenis
+//     height: auto
+// .lenis.lenis-smooth
+//     scroll-behavior: auto
+// .lenis.lenis-smooth [data-lenis-prevent]
+//     overscroll-behavior: contain
+// .lenis.lenis-stopped
+//     overflow: hidden
+// .lenis.lenis-scrolling iframe
+//     pointer-events: none
+// -------------------------------------------------- general
+:root
+    --swiper-theme-color: $black
+*
+    margin: 0
+    font-weight: normal
+    box-sizing: border-box
+html, body, input, textarea
+    font-family: "Bw Gradual"
+    color: $black
+    font-size: 18px
+    -webkit-font-smoothing: antialiased
+html
+    overflow-x: hidden
+    // overflow-y: hidden
+    // background-color: $black
+body
+    // background-color: $blue
+::selection
+    color: $blue
+    background-color: $black
+.text-justify
+    text-align: justify
+    margin-bottom: -1em
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
+.text-right
+    text-align: right
+.text-center
+    text-align: center
+h1, h2, h3
+    line-height: 1
+    font-size: 40px
+a
+    text-decoration: none
+    color: inherit
+.d-flex
+    display: flex
+    gap: $gap
+.flex-column
+    flex-direction: column
+.flex-row
+    flex-direction: row
+    align-items: start
+    > *
+        min-width: 0
+.d-inline-block
+    display: inline-block
+.border
+    border: solid 1px $white
+img, video
+    display: block
+    background-color: $black
+    max-width: 100%
+.hide
+    display: none
+.touch-show
+    display: none
+// -------------------------------------------------- ???
+.gradient-wrapper
+    gap: 0
+    //filter: blur(.5px)
+    div
+        width: calc(100vw / 7)
+        background: linear-gradient(0deg, #000dff, #ff41fc, #000dff)
+        background-size: 400% 400%
+        animation: gradient 2s linear alternate infinite
+        height: 100vh
+        font-size: calc(100vw / 7)
+        text-align: center
+        align-content: center
+        color: #fff
+        span
+            mix-blend-mode: overlay
+            font-family: "Bw Gradual"
+            font-weight: 600
+@keyframes gradient
+    0%
+        background-position: 0% 0%
+    100%
+        background-position: 0% 100%
+.sticky-title
+    // border-top: $border
+    padding: 1.5*$gap 2*$gap+50px
+    position: absolute
+    top: 0
+    // background-color: $blue
+    width: 100vw
+    z-index: 888
+.section
+    height: 100vh
+#main-swiper
+    .swiper-slide
+        width: 100dvw
+        height: 100dvh
+    .main-navigation-bar
+        border-bottom: $border
+        position: absolute
+        top: 0
+        width: 100vw
+        z-index: 888
+        justify-content: space-between
+    .swiper-prev-custom, .swiper-next-custom
+        width: 50px
+        height: 50px
+        padding: $gap
+        cursor: pointer
+        aspect-ratio: 1
+        position: relative
+        // background-color: $blue
+        &:hover
+            // background-color: $black
+            // color: $blue
+        span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 40px
+            line-height: 1
+            user-select: none
+            margin-top: -.3rem
+    .swiper-prev-custom
+        // border-right: $border
+    .swiper-next-custom
+        // border-left: $border
+    .slide-content
+        padding: $gap
+        height: 100%
+        overflow-y: scroll
+        padding-top: $gap + 50px
+        > *
+            flex-basis: 100%
+.content-block
+    flex-direction: column
+// -------------------------------------------------- media queries
+@media screen and (max-width: $lg-break)
+@media screen and (min-width: $md-break + 1)
+    .lg-hide
+        display: none !important
+@media screen and (max-width: $md-break)
+    html, body, input, textarea
+        font-size: 15px
+@media screen and (max-width: $md-break) and (min-width: $sm-break + 1)
+    .md-hide
+        display: none !important
+@media screen and (max-width: $sm-break)
+    .sm-hide
+        display: none !important
+    html, body, input, textarea
+        font-size: 14px
+    h1, h2, h3
+        font-size: 20px
+:root
+    --color-bg1: rgb(43, 0, 255)
+    --color-bg2: rgb(255, 0, 208)
+    --color1: 43, 0, 255
+    --color2: 255, 0, 208
+    --color3: 43, 0, 255
+    --color4: 255, 0, 208
+    --color-interactive: 255, 255, 255
+    --circle-size: 80%
+    --blending: hard-light
+@keyframes moveInCircle
+    0%
+        transform: rotate(0deg)
+    50%
+        transform: rotate(180deg)
+    100%
+        transform: rotate(360deg)
+@keyframes moveVertical
+    0%
+        transform: translateY(-50%)
+    50%
+        transform: translateY(50%)
+    100%
+        transform: translateY(-50%)
+@keyframes moveHorizontal
+    0%
+        transform: translateX(-50%) translateY(-10%)
+    50%
+        transform: translateX(50%) translateY(10%)
+    100%
+        transform: translateX(-50%) translateY(-10%)
+.gradient-bg
+    width: 100dvw
+    height: 100dvh
+    position: fixed
+    overflow: hidden
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2))
+    top: 0
+    left: 0
+    z-index: -1
+.filter-svg
+    display: none
+.gradients-container
+    filter: url(#goo) blur(40px)
+    width: 100%
+    height: 100%
+.g1, .g2, .g3, .g4
+    position: absolute
+    mix-blend-mode: var(--blending)
+    width: var(--circle-size)
+    height: var(--circle-size)
+    opacity: 1
+.g1
+    background: radial-gradient(circle at center, rgba(var(--color1), .8) 0, rgba(var(--color1), 0) 50%) no-repeat
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: center center
+    animation: moveVertical 30s ease infinite
+.g2
+    background: radial-gradient(circle at center, rgba(var(--color2), .8) 0, rgba(var(--color2), 0) 50%) no-repeat
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: calc(50% - 400px)
+    animation: moveInCircle 20s reverse infinite
+.g3
+    background: radial-gradient(circle at center, rgba(var(--color3), .8) 0, rgba(var(--color3), 0) 50%) no-repeat
+    top: calc(50% - var(--circle-size) / 2 + 200px)
+    left: calc(50% - var(--circle-size) / 2 - 500px)
+    transform-origin: calc(50% + 400px)
+    animation: moveInCircle 40s linear infinite
+.g4
+    background: radial-gradient(circle at center, rgba(var(--color4), .8) 0, rgba(var(--color4), 0) 50%) no-repeat
+    top: calc(50% - var(--circle-size) / 2)
+    left: calc(50% - var(--circle-size) / 2)
+    transform-origin: calc(50% - 200px)
+    animation: moveHorizontal 40s ease infinite
+    opacity: .7
+.g-interactive
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), .8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat
+    width: 100%
+    height: 100%
+    top: -50%
+    left: -50%
+    opacity: .7
