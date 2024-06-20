@@ -22,6 +22,7 @@ function is_touch_device() {
 if (is_touch_device()) {
     $(".touch-hide").hide();
     $(".touch-show").show();
+    $(".swiper-prev-custom, .swiper-next-custom").addClass("mobile");
 }
 
 var vw = $(window).width() / 100;
@@ -34,7 +35,7 @@ const swiper = new Swiper("#main-swiper", {
     spaceBetween: 0,
     allowTouchMove: false,
     autoHeight: true,
-    // initialSlide: 1,
+    // initialSlide: 6,
     navigation: {
         nextEl: ".swiper-next-custom",
         prevEl: ".swiper-prev-custom",

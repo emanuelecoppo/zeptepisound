@@ -12,44 +12,8 @@
 }
 @font-face {
   font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-Thin.woff);
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-Light.woff);
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
   src: url(/fonts/bw-gradual/BwGradual-Regular.woff);
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-Medium.woff);
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-Bold.woff);
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff);
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Bw Gradual";
-  src: url(/fonts/bw-gradual/BwGradual-Black.woff);
-  font-weight: 800;
   font-style: normal;
 }
 :root {
@@ -123,6 +87,10 @@ b, strong {
   color: #ffffff;
   background-color: #000000;
   text-decoration: none;
+}
+
+.border {
+  border: 1px solid black;
 }
 
 .d-flex {
@@ -207,6 +175,10 @@ button.negative:hover {
   color: #000000;
 }
 
+.button-next {
+  margin: 80px 0;
+}
+
 #main-swiper .swiper-slide {
   overflow-y: scroll;
   height: 100vh;
@@ -262,6 +234,10 @@ button.negative:hover {
 #main-swiper .swiper-prev-custom:hover, #main-swiper .swiper-next-custom:hover {
   background-color: #ffffff;
   color: #000000;
+}
+#main-swiper .swiper-prev-custom.mobile:hover, #main-swiper .swiper-next-custom.mobile:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 #main-swiper .swiper-prev-custom span, #main-swiper .swiper-next-custom span {
   position: absolute;
@@ -320,6 +296,9 @@ button.negative:hover {
   background-color: #000000 !important;
   overflow-x: hidden;
 }
+#first-slide .button-next {
+  margin: 0;
+}
 #first-slide .slide-content {
   padding: 20px;
 }
@@ -347,6 +326,6 @@ button.negative:hover {
     display: none !important;
   }
   html, body, input, textarea {
-    font-size: 14px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

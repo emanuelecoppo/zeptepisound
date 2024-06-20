@@ -8,41 +8,41 @@
     src: url(/fonts/zeptepi-symbols.woff)
     font-weight: normal
     font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-Thin.woff)
-    font-weight: 200
-    font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-Light.woff)
-    font-weight: 300
-    font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-Thin.woff)
+//     font-weight: 200
+//     font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-Light.woff)
+//     font-weight: 300
+//     font-style: normal
 @font-face
     font-family: "Bw Gradual"
     src: url(/fonts/bw-gradual/BwGradual-Regular.woff)
     font-weight: 400
     font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-Medium.woff)
-    font-weight: 500
-    font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-Bold.woff)
-    font-weight: 600
-    font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff)
-    font-weight: 700
-    font-style: normal
-@font-face
-    font-family: "Bw Gradual"
-    src: url(/fonts/bw-gradual/BwGradual-Black.woff)
-    font-weight: 800
-    font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-Medium.woff)
+//     font-weight: 500
+//     font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-Bold.woff)
+//     font-weight: 600
+//     font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff)
+//     font-weight: 700
+//     font-style: normal
+// @font-face
+//     font-family: "Bw Gradual"
+//     src: url(/fonts/bw-gradual/BwGradual-Black.woff)
+//     font-weight: 800
+//     font-style: normal
 $symbols: "ZEPTEPI Symbols"
 $format-1452: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif
 $blue: #3278ff
@@ -107,6 +107,8 @@ b, strong
         color: $white
         background-color: $black
         text-decoration: none
+.border
+    border: $border
 // -------------------------------------------------- display
 .d-flex
     display: flex
@@ -163,7 +165,7 @@ button
             background-color: $white
             color: $black
 .button-next
-    // margin-top: 8*$gap
+    margin: 8*$gap 0
 // -------------------------------------------------- swiper
 #main-swiper
     .swiper-slide
@@ -214,6 +216,9 @@ button
         &:hover
             background-color: $white
             color: $black
+        &.mobile:hover
+            background-color: $black !important
+            color: $white !important
         span
             position: absolute
             top: 50%
@@ -259,7 +264,7 @@ button
     background-color: $black !important
     overflow-x: hidden
     .button-next
-        // margin-top: 0
+        margin: 0
     .slide-content
         padding: 2*$gap
 // -------------------------------------------------- media queries
@@ -279,4 +284,4 @@ button
     .sm-hide
         display: none !important
     html, body, input, textarea
-        font-size: 14px
+        font-size: 15px
