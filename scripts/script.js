@@ -34,7 +34,7 @@ const swiper = new Swiper("#main-swiper", {
     spaceBetween: 0,
     allowTouchMove: false,
     autoHeight: true,
-    initialSlide: 1,
+    // initialSlide: 1,
     navigation: {
         nextEl: ".swiper-next-custom",
         prevEl: ".swiper-prev-custom",
