@@ -8,43 +8,14 @@
     src: url(/fonts/zeptepi-symbols.woff)
     font-weight: normal
     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-Thin.woff)
-//     font-weight: 200
-//     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-Light.woff)
-//     font-weight: 300
-//     font-style: normal
 @font-face
     font-family: "Bw Gradual"
     src: url(/fonts/bw-gradual/BwGradual-Regular.woff)
     font-weight: 400
     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-Medium.woff)
-//     font-weight: 500
-//     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-Bold.woff)
-//     font-weight: 600
-//     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-ExtraBold.woff)
-//     font-weight: 700
-//     font-style: normal
-// @font-face
-//     font-family: "Bw Gradual"
-//     src: url(/fonts/bw-gradual/BwGradual-Black.woff)
-//     font-weight: 800
-//     font-style: normal
 $symbols: "ZEPTEPI Symbols"
 $format-1452: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif
+$bw-gradual: "Bw Gradual", Helvetica, Arial, sans-serif
 $blue: #3278ff
 $black: #000000
 $white: #ffffff
@@ -52,18 +23,7 @@ $lg-break: 1440px
 $md-break: 1024px
 $sm-break: 767px
 $gap: 10px
-$border: 1px solid black
-// -------------------------------------------------- lenis
-// html.lenis
-//     height: auto
-// .lenis.lenis-smooth
-//     scroll-behavior: auto
-// .lenis.lenis-smooth [data-lenis-prevent]
-//     overscroll-behavior: contain
-// .lenis.lenis-stopped
-//     overflow: hidden
-// .lenis.lenis-scrolling iframe
-//     pointer-events: none
+$border: 1px solid $black
 // -------------------------------------------------- general
 :root
     --swiper-theme-color: $black
@@ -72,7 +32,7 @@ $border: 1px solid black
     font-weight: 400
     box-sizing: border-box
 html, body, input, textarea, button
-    font-family: "Bw Gradual"
+    font-family: $bw-gradual
     color: $black
     font-size: 15px
     -webkit-font-smoothing: antialiased
@@ -188,8 +148,8 @@ button
         text-align: center
         user-select: none
         border-bottom: $border
-        border-color: $white !important
-        color: $white !important
+        border-color: $white
+        color: $white
         mix-blend-mode: difference
     .main-navigation-bar
         position: fixed
@@ -273,15 +233,15 @@ button
     .lg-hide
         display: none !important
 @media screen and (max-width: $md-break)
-    html, body, input, textarea
-        font-size: 15px
-    .content-block.flex-row:not(.small-gap)
-        flex-direction: column
 @media screen and (max-width: $md-break) and (min-width: $sm-break + 1)
     .md-hide
         display: none !important
 @media screen and (max-width: $sm-break)
     .sm-hide
         display: none !important
-    html, body, input, textarea
-        font-size: 15px
+// -------------------------------------------------- safari ios
+html.is-ios-safari .sticky-title
+    background-color: $white !important
+    color: $black !important
+    border-color: $black !important
+    mix-blend-mode: normal !important

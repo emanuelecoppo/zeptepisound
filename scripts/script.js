@@ -1,17 +1,3 @@
-// -------------------------------------------------- scroll
-// if (document.getElementById("lenis-disable") === null) {
-//   const lenis = new Lenis({
-//   });
-//   function raf(time) {
-//       lenis.raf(time);
-//       requestAnimationFrame(raf);
-//   }
-//   requestAnimationFrame(raf);
-// }
-// else {
-//   document.getElementById("page-wrapper").classList.add("snap-container");
-// }
-
 // -------------------------------------------------- detect touch
 function is_touch_device() {
     return (
@@ -35,7 +21,7 @@ const swiper = new Swiper("#main-swiper", {
     spaceBetween: 0,
     allowTouchMove: false,
     autoHeight: true,
-    // initialSlide: 6,
+    initialSlide: 1,
     navigation: {
         nextEl: ".swiper-next-custom",
         prevEl: ".swiper-prev-custom",
@@ -59,22 +45,6 @@ function updateElementStyle() {
 updateElementStyle();
 swiper.on("slideChange", updateElementStyle);
 
-// -------------------------------------------------- stop audio & video
-// // Function to stop the YouTube video
-// function stopVideo() {
-//     var iframe = document.getElementById("lalala");
-//     var iframeSrc = iframe.src;
-//     // Adding ?enablejsapi=1 to the URL if not already present
-//     if (iframeSrc.indexOf("?") === -1) {
-//         iframeSrc += "?enablejsapi=1";
-//     } else {
-//         iframeSrc += "&enablejsapi=1";
-//     }
-//     iframe.src = iframeSrc;
-//     // Sending command to stop the video
-//     iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
-// }
-
 // -------------------------------------------------- simboli
 $(".simboli span").each(function () {
     var simbolo = $(this);
@@ -82,3 +52,14 @@ $(".simboli span").each(function () {
         simbolo.html(String.fromCharCode(65 + Math.floor(Math.random() * 26)));
     }, Math.floor(Math.random() * (1000 - 500 + 1) + 500));
 });
+
+// -------------------------------------------------- safari ios
+(function () {
+    var is_ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent),
+        is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+    if (is_ios && is_safari) {
+        var $html = document.documentElement,
+            classes = $html.className.concat(" is-ios-safari");
+        $html.className = classes;
+    }
+})();

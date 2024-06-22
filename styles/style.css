@@ -27,7 +27,7 @@
 }
 
 html, body, input, textarea, button {
-  font-family: "Bw Gradual";
+  font-family: "Bw Gradual", Helvetica, Arial, sans-serif;
   color: #000000;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
@@ -90,7 +90,7 @@ b, strong {
 }
 
 .border {
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .d-flex {
@@ -152,7 +152,7 @@ img, video {
 button {
   background-color: #ffffff;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid #000000;
   cursor: pointer;
   padding: 30px 10px;
 }
@@ -201,9 +201,9 @@ button.negative:hover {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-bottom: 1px solid black;
-  border-color: #ffffff !important;
-  color: #ffffff !important;
+  border-bottom: 1px solid #000000;
+  border-color: #ffffff;
+  color: #ffffff;
   mix-blend-mode: difference;
 }
 #main-swiper .main-navigation-bar {
@@ -308,14 +308,6 @@ button.negative:hover {
     display: none !important;
   }
 }
-@media screen and (max-width: 1024px) {
-  html, body, input, textarea {
-    font-size: 15px;
-  }
-  .content-block.flex-row:not(.small-gap) {
-    flex-direction: column;
-  }
-}
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .md-hide {
     display: none !important;
@@ -325,7 +317,10 @@ button.negative:hover {
   .sm-hide {
     display: none !important;
   }
-  html, body, input, textarea {
-    font-size: 15px;
-  }
+}
+html.is-ios-safari .sticky-title {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  mix-blend-mode: normal !important;
 }/*# sourceMappingURL=style.css.map */

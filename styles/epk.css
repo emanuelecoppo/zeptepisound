@@ -1,8 +1,16 @@
 @charset "utf-8";
 /*--------------------FONTS--------------------*/
 @font-face {
-  font-family: ZEPTEPI-Format;
-  src: url("/fonts/Format-1452-ZEPTEPI.woff");
+  font-family: "Format 1452 ZEPTEPI";
+  src: url(/fonts/format-1452-zeptepi.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZEPTEPI Symbols";
+  src: url(/fonts/zeptepi-symbols.woff);
+  font-weight: normal;
+  font-style: normal;
 }
 /*--------------------BROWSER--------------------*/
 ::-webkit-scrollbar {
