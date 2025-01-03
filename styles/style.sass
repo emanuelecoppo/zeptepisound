@@ -17,13 +17,15 @@ $symbols: "ZEPTEPI Symbols"
 $format-1452: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif
 $bw-gradual: "Bw Gradual", Helvetica, Arial, sans-serif
 $blue: #3278ff
-$black: #000000
-$white: #ffffff
+$black: #ffffff
+$white: #000000
+$dark-grey: #444444
 $lg-break: 1440px
 $md-break: 1024px
 $sm-break: 767px
 $gap: 10px
 $border: 1px solid $black
+$radius: 5px
 // -------------------------------------------------- general
 :root
     --swiper-theme-color: $black
@@ -38,7 +40,10 @@ html, body, input, textarea, button
     -webkit-font-smoothing: antialiased
 body
     background-color: $white
-    overflow-y: hidden
+    max-width: $sm-break
+    margin: 0 auto
+    outline: $border
+    outline-color: $black
 ::selection
     color: $white
     background-color: $black
@@ -55,7 +60,7 @@ body
     text-align: center
 h1, h2, h3
     line-height: 1
-    font-size: 20px
+    font-size: 22px
 a
     text-decoration: none
     color: inherit
@@ -70,9 +75,14 @@ b, strong
 .border
     border: $border
 // -------------------------------------------------- display
+.section
+    padding: 4*$gap 1.5*$gap
+footer
+    border-top: $border
+    border-color: $black
 .d-flex
     display: flex
-    gap: 2*$gap
+    gap: 4*$gap
 .small-gap
     gap: $gap
 .flex-column
@@ -89,159 +99,179 @@ b, strong
     display: none
 .touch-show
     display: none
-// -------------------------------------------------- ???
+// -------------------------------------------------- altro
 img, video
+    border-radius: $radius
     display: block
-    background-color: $black
+    // background-color: $dark-grey
     max-width: 100%
     user-select: none
 .youtube
-    background-color: $black
+    border-radius: $radius
+    // background-color: $dark-grey
     aspect-ratio: 16/9
     width: 100%
     height: 100%
     line-height: 0
 .soundcloud
-    background-color: $white
-    border-radius: 5px
-button
-    background-color: $white
+    border-radius: $radius
+    // background-color: $dark-grey
+a.button
+    border-radius: $radius
+    text-align: center
+    background-color: $black
+    color: $white
     outline: none
     border: $border
     cursor: pointer
-    padding: 3*$gap $gap
+    padding: 2*$gap $gap
     &:hover
+        background-color: $white
+        color: $black
+#contatti .d-flex
+    gap: 2*$gap
+// -------------------------------------------------- navigation
+.sticky-title
+    position: sticky
+    top: -1px
+    left: 0
+    width: 100%
+    padding: 2*$gap $gap
+    text-align: center
+    user-select: none
+    border-bottom: $border
+    border-color: $black
+    color: $black
+    background-color: $white
+    z-index: 2
+.main-navigation-bar
+    overflow: hidden
+    pointer-events: none
+    position: fixed
+    top: 0
+    left: 50%
+    z-index: 999
+    width: 100%
+    max-width: $sm-break
+    gap: 0
+    transform: translateX(-50%)
+    .sticky-title
+        background-color: transparent
+        border-bottom: 0
+        position: relative
+#dropdown
+    pointer-events: auto
+    gap: 0
+    transform: translateX(calc(100% + 1px))
+    transition: transform .3s ease-in-out
+    &.active
+        transform: translateX(0%)
+    a
+        background-color: $white
+        padding: 1.5*$gap $gap
+        border-bottom: $border
+        border-color: $black
+        box-shadow: -1px 0 0 $black
+    a:first-of-type
+        border-top: $border
+    a:hover
         background-color: $black
         color: $white
-    .next
-        margin-left: .5*$gap
-        line-height: 0
-        font-size: 150%
-    &.negative
-        background-color: transparent
-        border-color: $white
-        color: $white
-        &:hover
-            background-color: $white
-            color: $black
-.button-next
-    margin: 8*$gap 0
-// -------------------------------------------------- swiper
-#main-swiper
-    .swiper-slide
-        overflow-y: scroll
-        height: 100vh
-        height: 100dvh
-        background-color: $white
-    .slide-content
-        padding: 2*$gap $gap
-        max-width: $sm-break
-        margin: 0 auto
-// -------------------------------------------------- navigation
-#main-swiper
-    .sticky-title
-        position: sticky
-        top: 0
-        left: 0
-        width: 100vw
-        padding: 1.5*$gap 2*$gap
-        text-align: center
-        user-select: none
-        border-bottom: $border
-        border-color: $white
-        color: $white
-        mix-blend-mode: difference
-    .main-navigation-bar
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 999
-        width: 100vw
-        justify-content: space-between
-        mix-blend-mode: difference
-        &.on-first-slide
-            .swiper-prev-custom
-                transform: translateX(-100%)
-            .swiper-next-custom
-                transform: translateX(100%)
-    .swiper-prev-custom, .swiper-next-custom
+#hamburger
+    pointer-events: auto
+    position: absolute
+    top: 50%
+    right: $gap
+    transform: translateY(-50%)
+    cursor: pointer
+    width: 22px
+    height: 15px
+    gap: 0
+    justify-content: space-between
+    .line
+        background-color: $black
+        height: 1px
+        width: 100%
+        transform-origin: center
         transition: transform .3s ease-in-out
-        flex: 0 0 auto
-        width: 50px
-        height: 50px
-        padding: $gap
-        cursor: pointer
-        position: relative
-        color: $white
-        &:hover
-            background-color: $white
-            color: $black
-        &.mobile:hover
-            background-color: $black !important
-            color: $white !important
-        span
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            font-size: 35px
-            line-height: 1
-            user-select: none
-            margin-top: -.3rem
-    .swiper-prev-custom
-        // border-right: $border
-    .swiper-next-custom
-        // border-left: $border
-    .swiper-button-disabled
-        color: rgba(255,255,255,.2)
-        &:hover
-            background-color: transparent !important
-            color: rgba(255,255,255,.2) !important
-            cursor: auto
+    &.active
+        .line:nth-child(1) 
+            transform: translateY(7px) rotate(45deg)
+        .line:nth-child(2)
+            transform: scaleX(0)
+        .line:nth-child(3) 
+            transform: translateY(-7px) rotate(-45deg)
 // -------------------------------------------------- first slide
+#intro .sticky-title
+    z-index: 9
+#intro .section
+    gap: 2*$gap
 #hero-image
     position: absolute
     bottom: 0
     left: 50%
     transform: translateX(-50%)
-    width: 800px
+    width: 100%
+    aspect-ratio: 4/3
+    object-fit: cover
     max-width: none
     z-index: -1
 #hero-title
     font-family: $format-1452
-    font-size: 30px
+    font-size: 35px
 .simboli
     font-family: $symbols
-    font-size: 50px
+    font-size: 55px
 #hero-title, .simboli
-    color: $white
+    color: $black
     justify-content: space-between
     user-select: none
+    z-index: 8
     span
         text-align: center
         line-height: 1
-#first-slide
-    background-color: $black !important
-    overflow-x: hidden
-    .button-next
-        margin: 0
-    .slide-content
-        padding: 2*$gap
+// -------------------------------------------------- swiper
+.swiper
+    width: 100%
+    border-radius: $radius
+.ratio-16-9
+    aspect-ratio: 16/9
+    object-fit: cover
+.ratio-9-16
+    aspect-ratio: 9/16
+    object-fit: cover
+.ratio-4-3
+    aspect-ratio: 4/3
+    object-fit: cover
+.ratio-3-4
+    aspect-ratio: 3/4
+    object-fit: cover
+.ratio-3-2
+    aspect-ratio: 3/2
+    object-fit: cover
+.ratio-2-3
+    aspect-ratio: 2/3
+    object-fit: cover
+.ratio-1-1
+    aspect-ratio: 1
+    object-fit: cover
 // -------------------------------------------------- media queries
 @media screen and (max-width: $lg-break)
 @media screen and (min-width: $md-break + 1)
     .lg-hide
         display: none !important
+    .section
+        padding-left: 3*$gap
+        padding-right: 3*$gap
 @media screen and (max-width: $md-break)
 @media screen and (max-width: $md-break) and (min-width: $sm-break + 1)
     .md-hide
         display: none !important
+    .section
+        padding-left: 3*$gap
+        padding-right: 3*$gap
 @media screen and (max-width: $sm-break)
     .sm-hide
         display: none !important
-// -------------------------------------------------- safari ios
-html.is-ios-safari .sticky-title
-    background-color: $white !important
-    color: $black !important
-    border-color: $black !important
-    mix-blend-mode: normal !important
+    html, body, input, textarea, button
+        font-size: 14px

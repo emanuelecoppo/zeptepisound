@@ -28,24 +28,27 @@
 
 html, body, input, textarea, button {
   font-family: "Bw Gradual", Helvetica, Arial, sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: #ffffff;
-  overflow-y: hidden;
+  background-color: #000000;
+  max-width: 767px;
+  margin: 0 auto;
+  outline: 1px solid #ffffff;
+  outline-color: #ffffff;
 }
 
 ::-moz-selection {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 ::selection {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .text-justify {
@@ -68,7 +71,7 @@ body {
 
 h1, h2, h3 {
   line-height: 1;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 a {
@@ -84,18 +87,27 @@ b, strong {
   text-decoration: underline;
 }
 .underline:hover {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
   text-decoration: none;
 }
 
 .border {
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
+}
+
+.section {
+  padding: 40px 15px;
+}
+
+footer {
+  border-top: 1px solid #ffffff;
+  border-color: #ffffff;
 }
 
 .d-flex {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .small-gap {
@@ -128,8 +140,8 @@ b, strong {
 }
 
 img, video {
+  border-radius: 5px;
   display: block;
-  background-color: #000000;
   max-width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -137,7 +149,7 @@ img, video {
 }
 
 .youtube {
-  background-color: #000000;
+  border-radius: 5px;
   aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
@@ -145,119 +157,122 @@ img, video {
 }
 
 .soundcloud {
-  background-color: #ffffff;
   border-radius: 5px;
 }
 
-button {
+a.button {
+  border-radius: 5px;
+  text-align: center;
   background-color: #ffffff;
+  color: #000000;
   outline: none;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   cursor: pointer;
-  padding: 30px 10px;
+  padding: 20px 10px;
 }
-button:hover {
+a.button:hover {
   background-color: #000000;
   color: #ffffff;
 }
-button .next {
-  margin-left: 5px;
-  line-height: 0;
-  font-size: 150%;
-}
-button.negative {
-  background-color: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
-}
-button.negative:hover {
-  background-color: #ffffff;
-  color: #000000;
+
+#contatti .d-flex {
+  gap: 20px;
 }
 
-.button-next {
-  margin: 80px 0;
-}
-
-#main-swiper .swiper-slide {
-  overflow-y: scroll;
-  height: 100vh;
-  height: 100dvh;
-  background-color: #ffffff;
-}
-#main-swiper .slide-content {
-  padding: 20px 10px;
-  max-width: 767px;
-  margin: 0 auto;
-}
-
-#main-swiper .sticky-title {
+.sticky-title {
   position: sticky;
-  top: 0;
+  top: -1px;
   left: 0;
-  width: 100vw;
-  padding: 15px 20px;
+  width: 100%;
+  padding: 20px 10px;
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
   border-color: #ffffff;
   color: #ffffff;
-  mix-blend-mode: difference;
+  background-color: #000000;
+  z-index: 2;
 }
-#main-swiper .main-navigation-bar {
+
+.main-navigation-bar {
+  overflow: hidden;
+  pointer-events: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   z-index: 999;
-  width: 100vw;
-  justify-content: space-between;
-  mix-blend-mode: difference;
+  width: 100%;
+  max-width: 767px;
+  gap: 0;
+  transform: translateX(-50%);
 }
-#main-swiper .main-navigation-bar.on-first-slide .swiper-prev-custom {
-  transform: translateX(-100%);
-}
-#main-swiper .main-navigation-bar.on-first-slide .swiper-next-custom {
-  transform: translateX(100%);
-}
-#main-swiper .swiper-prev-custom, #main-swiper .swiper-next-custom {
-  transition: transform 0.3s ease-in-out;
-  flex: 0 0 auto;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  cursor: pointer;
+.main-navigation-bar .sticky-title {
+  background-color: transparent;
+  border-bottom: 0;
   position: relative;
-  color: #ffffff;
 }
-#main-swiper .swiper-prev-custom:hover, #main-swiper .swiper-next-custom:hover {
+
+#dropdown {
+  pointer-events: auto;
+  gap: 0;
+  transform: translateX(calc(100% + 1px));
+  transition: transform 0.3s ease-in-out;
+}
+#dropdown.active {
+  transform: translateX(0%);
+}
+#dropdown a {
+  background-color: #000000;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ffffff;
+  border-color: #ffffff;
+  box-shadow: -1px 0 0 #ffffff;
+}
+#dropdown a:first-of-type {
+  border-top: 1px solid #ffffff;
+}
+#dropdown a:hover {
   background-color: #ffffff;
   color: #000000;
 }
-#main-swiper .swiper-prev-custom.mobile:hover, #main-swiper .swiper-next-custom.mobile:hover {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-#main-swiper .swiper-prev-custom span, #main-swiper .swiper-next-custom span {
+
+#hamburger {
+  pointer-events: auto;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
-  line-height: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  margin-top: -0.3rem;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 22px;
+  height: 15px;
+  gap: 0;
+  justify-content: space-between;
 }
-#main-swiper .swiper-button-disabled {
-  color: rgba(255, 255, 255, 0.2);
+#hamburger .line {
+  background-color: #ffffff;
+  height: 1px;
+  width: 100%;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
 }
-#main-swiper .swiper-button-disabled:hover {
-  background-color: transparent !important;
-  color: rgba(255, 255, 255, 0.2) !important;
-  cursor: auto;
+#hamburger.active .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#hamburger.active .line:nth-child(2) {
+  transform: scaleX(0);
+}
+#hamburger.active .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#intro .sticky-title {
+  z-index: 9;
+}
+
+#intro .section {
+  gap: 20px;
 }
 
 #hero-image {
@@ -265,19 +280,22 @@ button.negative:hover {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: none;
   z-index: -1;
 }
 
 #hero-title {
   font-family: "Format 1452 ZEPTEPI", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .simboli {
   font-family: "ZEPTEPI Symbols";
-  font-size: 50px;
+  font-size: 55px;
 }
 
 #hero-title, .simboli {
@@ -286,41 +304,83 @@ button.negative:hover {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  z-index: 8;
 }
 #hero-title span, .simboli span {
   text-align: center;
   line-height: 1;
 }
 
-#first-slide {
-  background-color: #000000 !important;
-  overflow-x: hidden;
+.swiper {
+  width: 100%;
+  border-radius: 5px;
 }
-#first-slide .button-next {
-  margin: 0;
+
+.ratio-16-9 {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-#first-slide .slide-content {
-  padding: 20px;
+
+.ratio-9-16 {
+  aspect-ratio: 9/16;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ratio-4-3 {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ratio-3-4 {
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ratio-3-2 {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ratio-2-3 {
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ratio-1-1 {
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 1025px) {
   .lg-hide {
     display: none !important;
   }
+  .section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .md-hide {
     display: none !important;
+  }
+  .section {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media screen and (max-width: 767px) {
   .sm-hide {
     display: none !important;
   }
-}
-html.is-ios-safari .sticky-title {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border-color: #000000 !important;
-  mix-blend-mode: normal !important;
+  html, body, input, textarea, button {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

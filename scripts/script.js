@@ -8,7 +8,6 @@ function is_touch_device() {
 if (is_touch_device()) {
     $(".touch-hide").hide();
     $(".touch-show").show();
-    $(".swiper-prev-custom, .swiper-next-custom").addClass("mobile");
 }
 
 var vw = $(window).width() / 100;
@@ -16,34 +15,17 @@ var vh = $(window).height() / 100;
 var root = document.documentElement;
 
 // -------------------------------------------------- swiper
-const swiper = new Swiper("#main-swiper", {
-    speed: 400,
-    spaceBetween: 0,
-    allowTouchMove: false,
-    autoHeight: true,
-    // initialSlide: 1,
-    navigation: {
-        nextEl: ".swiper-next-custom",
-        prevEl: ".swiper-prev-custom",
-    },
-    on: {
-        slideChangeTransitionEnd: function () {
-            $(".slide-content").scrollTop(0);
+const swipers = document.querySelectorAll(".swiper");
+swipers.forEach((container, index) => {
+    new Swiper(container, {
+        loop: true,
+        speed: 400,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 2000,
         },
-    },
+    });
 });
-
-// -------------------------------------------------- hide nav on first slide
-var mainNav = $(".main-navigation-bar");
-function updateElementStyle() {
-    if (swiper.activeIndex === 0) {
-        mainNav.addClass("on-first-slide");
-    } else {
-        mainNav.removeClass("on-first-slide");
-    }
-}
-updateElementStyle();
-swiper.on("slideChange", updateElementStyle);
 
 // -------------------------------------------------- simboli
 $(".simboli span").each(function () {
@@ -63,3 +45,42 @@ $(".simboli span").each(function () {
         $html.className = classes;
     }
 })();
+
+// -------------------------------------------------- nav
+$("#hamburger").on("click", function() {
+    $(this).toggleClass("active");
+    $("#dropdown").toggleClass("active");
+});
+$("#dropdown").on("click", function() {
+    $("#hamburger").removeClass("active");
+    $(this).removeClass("active");
+});
+$(document).on("click", function (event) {
+    if (!$(event.target).closest(".main-navigation-bar").length) {
+        // Click is outside the navigation bar
+        $("#hamburger").removeClass("active");
+        $("#dropdown").removeClass("active");
+    }
+});
+
+// -------------------------------------------------- scroll
+var lenis = new Lenis({
+});
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// fix for id links
+document.querySelectorAll('a[href^="#"]').forEach((el) => {
+    el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = el.getAttribute("href")?.slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
