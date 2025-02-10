@@ -311,6 +311,10 @@ a.button:hover {
   line-height: 1;
 }
 
+#rifrazioni {
+  padding-top: 150px;
+}
+
 .swiper {
   width: 100%;
   border-radius: 5px;
