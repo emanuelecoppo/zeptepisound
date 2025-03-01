@@ -212,7 +212,7 @@ a.button
     left: 50%
     transform: translateX(-50%)
     width: 100%
-    aspect-ratio: 4/3
+    aspect-ratio: 3/4
     object-fit: cover
     max-width: none
     z-index: -1
@@ -231,7 +231,7 @@ a.button
         text-align: center
         line-height: 1
 #rifrazioni
-    padding-top: 150px
+    padding-top: 90%
 // -------------------------------------------------- swiper
 .swiper
     width: 100%
@@ -277,3 +277,58 @@ a.button
         display: none !important
     html, body, input, textarea, button
         font-size: 14px
+// -------------------------------------------------- plyr
+.playlist--list 
+    list-style: none
+    margin: 0
+    padding: 0
+    font-family: $bw-gradual
+    line-height: .80 
+    color: $black
+    li 
+        margin: 0
+        cursor: pointer
+        padding: 15px 10px
+        background: $white
+        border: 1px solid $black
+        border-top: none
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+    li:hover 
+        background-color: $dark-grey
+        border-color: $black
+        color: $black
+    li.active 
+        background-color: $black
+        border-color: $black
+        color: $white
+    li span 
+        float: right
+// overrides
+.plyr input[type=range]::-ms-fill-lower,
+.plyr input[type=range]:active::-webkit-slider-thumb,
+.plyr input[type=range]:active::-moz-range-thumb,
+.plyr input[type=range]:active::-ms-thumb
+    background: $white
+.plyr--video .plyr__controls button.tab-focus:focus,
+.plyr--video .plyr__controls button:hover 
+.plyr--audio input[type=range].tab-focus:focus 
+    outline: rgba(92, 92, 92, .5) dotted 1px
+    background: $white
+.plyr--audio .plyr__controls 
+    border: none
+    border-bottom: 1px solid $white
+    color: $white
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover,
+.plyr__play-large 
+    background: $white
+.plyr__progress--played,
+.plyr__volume--display 
+    color: $white
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display 
+    background: rgba(209, 209, 209, .66) 
+.plyr--audio .plyr__progress--buffer 
+    color: rgba(209, 209, 209, 1)
+.plyr--audio.plyr--loading .plyr__progress--buffer
+    background-color: rgba(209, 209, 209, .66)

@@ -281,7 +281,7 @@ a.button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: none;
@@ -312,7 +312,7 @@ a.button:hover {
 }
 
 #rifrazioni {
-  padding-top: 150px;
+  padding-top: 90%;
 }
 
 .swiper {
@@ -387,4 +387,76 @@ a.button:hover {
   html, body, input, textarea, button {
     font-size: 14px;
   }
+}
+.playlist--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Bw Gradual", Helvetica, Arial, sans-serif;
+  line-height: 0.8;
+  color: #ffffff;
+}
+.playlist--list li {
+  margin: 0;
+  cursor: pointer;
+  padding: 15px 10px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-top: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.playlist--list li:hover {
+  background-color: #444444;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.playlist--list li.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+.playlist--list li span {
+  float: right;
+}
+
+.plyr input[type=range]::-ms-fill-lower,
+.plyr input[type=range]:active::-webkit-slider-thumb,
+.plyr input[type=range]:active::-moz-range-thumb,
+.plyr input[type=range]:active::-ms-thumb {
+  background: #000000;
+}
+
+.plyr--audio input[type=range].tab-focus:focus {
+  outline: rgba(92, 92, 92, 0.5) dotted 1px;
+  background: #000000;
+}
+
+.plyr--audio .plyr__controls {
+  border: none;
+  border-bottom: 1px solid #000000;
+  color: #000000;
+}
+
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover,
+.plyr__play-large {
+  background: #000000;
+}
+
+.plyr__progress--played,
+.plyr__volume--display {
+  color: #000000;
+}
+
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+  background: rgba(209, 209, 209, 0.66);
+}
+
+.plyr--audio .plyr__progress--buffer {
+  color: rgb(209, 209, 209);
+}
+
+.plyr--audio.plyr--loading .plyr__progress--buffer {
+  background-color: rgba(209, 209, 209, 0.66);
 }/*# sourceMappingURL=style.css.map */
