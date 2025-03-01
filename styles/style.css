@@ -273,6 +273,7 @@ a.button:hover {
 
 #intro .section {
   gap: 20px;
+  padding-top: 20px;
 }
 
 #hero-image {
@@ -312,7 +313,7 @@ a.button:hover {
 }
 
 #rifrazioni {
-  padding-top: 90%;
+  padding-top: 80%;
 }
 
 .swiper {
